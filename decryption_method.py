@@ -24,6 +24,7 @@ def decryption(target_file_path, target_file, key_file):
 
                 #Decrypt the data
                 decrypted_data=fernet.decrypt(file_data)
+                    decrypted_data=fernet.decrypt(file_data)
 
                 #Write the decrypted data back to the same file
                 with open(file_path, 'wb') as f:
@@ -31,5 +32,6 @@ def decryption(target_file_path, target_file, key_file):
 
                 print(f"Decrypted: {file_path}")
 
-#call the function
+
+#Call the function
 decryption(target_file_path, target_file, key_file)
